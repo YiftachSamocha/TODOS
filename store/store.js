@@ -5,6 +5,8 @@ export const REMOVE_TODO = 'REMOVE_TODO'
 export const UPDATE_TODO = 'SAVE_TODO'
 export const ADD_TODO = 'ADD_TODO'
 
+export const SET_FILTER_BY = 'SET_FILTER_BY'
+
 const initalState = {
     todos: [],
     isLoading: false,
@@ -15,6 +17,7 @@ const initalState = {
 
 function appReducer(state = initalState, action = {}) {
     switch (action.type) {
+        //TODOS
         case SET_TODOS:
             return { ...state, todos: action.todos }
         case REMOVE_TODO:
@@ -25,6 +28,10 @@ function appReducer(state = initalState, action = {}) {
             return { ...state, todos: updatedTodos }
         case ADD_TODO:
             return { ...state, todos: [...state.todos, action.todo] }
+
+        //FILTER BY
+        case SET_FILTER_BY:
+            return { ...state, filterBy: { ...action.filterBy } }
 
         default:
             return state
