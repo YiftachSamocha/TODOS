@@ -29,3 +29,17 @@
 .todo-index hr {
     margin: 20px 0;
 }
+
+.no-todos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: black;
+    font-size: 3em;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

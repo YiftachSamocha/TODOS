@@ -17,6 +17,8 @@ export function TodoList({ todos }) {
             })
     }
 
+    if (todos.length === 0) return <div className="no-todos">No todos to show...</div>
+
 
     return (
         <ul className="todo-list">

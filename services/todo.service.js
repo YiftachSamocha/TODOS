@@ -2,6 +2,7 @@ import { utilService } from './util.service.js'
 import { storageService } from './async-storage.service.js'
 
 const TODO_KEY = 'todoDB'
+const PAGE_SIZE = 6
 _createTodos()
 
 export const todoService = {
@@ -32,9 +33,27 @@ function query(filterBy = {}) {
                 todos = todos.filter(todo => todo.isDone)
             }
 
+            if (filterBy.sort === 'txt') {
+                todos = todos.sort((a, b) => a.txt.localeCompare(b.txt))
+            }
+
+            if (filterBy.sort === 'importance') {
+                todos = todos.sort((a, b) => a.importance - b.importance)
+            }
+
+            if (filterBy.sort === 'createdAt') {
+                todos = todos.sort((a, b) => b.createdAt - a.createdAt)
+            }
+
+            const startIdx = PAGE_SIZE * filterBy.page - PAGE_SIZE
+            todos = todos.slice(startIdx, startIdx + PAGE_SIZE)
+
+
             return todos
         })
 }
+
+
 
 function get(todoId) {
     return storageService.get(TODO_KEY, todoId)

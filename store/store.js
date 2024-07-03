@@ -13,7 +13,7 @@ export const SET_IS_LOADING = 'SET_IS_LOADING'
 
 
 const initalState = {
-    todos: [],
+    todos: [-1],
     isLoading: false,
     filterBy: {},
     user: {},

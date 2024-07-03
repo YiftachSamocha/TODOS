@@ -31,7 +31,9 @@ export function TodoIndex() {
     }, [filterBy])
 
 
-    if (todos.length === 0) dispatch({ type: SET_IS_LOADING, isLoading: true })
+
+    if (todos.length === 0) return <div className="no-todos">No todos to show...</div>
+    if (todos[0] === -1) dispatch({ type: SET_IS_LOADING, isLoading: true })
     if (isLoading) return <Loader />
     return (
         <section className="todo-index">

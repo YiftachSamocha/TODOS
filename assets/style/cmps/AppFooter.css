@@ -1,0 +1,29 @@
+.footer {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.footer div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.footer p {
+    margin: 10px 0 0;
+    font-size: 1em;
+}
+
+.footer span {
+    font-weight: bold;
+    color: #ffeb3b;
+    /* Highlight the percentage */
+}
