@@ -1,16 +1,29 @@
 .todo-preview {
-    text-align: center;
-    padding: 0.3em;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.todo-preview h2 {
+    cursor: pointer;
+}
+
+.todo-preview h2.done {
+    text-decoration: line-through;
+    color: green;
+}
+
 .todo-preview h4 {
-    text-transform: capitalize;
-    color: black;
+    color: #555;
 }
 
 .todo-preview img {
-    max-width: 100px;
+    margin-top: 10px;
+    max-width: 50px;
+    border-radius: 5px;
 }

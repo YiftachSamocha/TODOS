@@ -1,28 +1,38 @@
-
-.toggle-btn input {
-  position: absolute;
-  opacity: 0;
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.toggle-btn {
-  display: inline-block;
-  font-size: 20px; /* 1 */
-  height: 1em;
-  width: 2em;
-  background: #BDB9A6;
-  border-radius: 1em;
+.toggle-btn input {
+  display: none;
 }
 
 .toggle-btn div {
-  height: 1em;
-  width: 1em;
-  border-radius: 1em;
-  background: #FFF;
-  box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
-  transition: all 300ms;
+  width: 50px;
+  height: 25px;
+  background-color: #ddd;
+  border-radius: 15px;
+  position: relative;
+  transition: background-color 0.3s;
 }
 
-.toggle-btn input:checked + div {
-    transform: translate3d(100%, 0, 0);
-    background: greenyellow;
+.toggle-btn div::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-btn input:checked+div {
+  background-color: #28a745;
+}
+
+.toggle-btn input:checked+div::after {
+  transform: translateX(25px);
 }

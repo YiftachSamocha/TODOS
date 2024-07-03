@@ -2,8 +2,6 @@
   box-sizing: border-box;
 }
 
-html {
-}
 
 body {
   margin: 0;
@@ -16,8 +14,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin: .5em 0 .5em;
-  font-family: 'Edu VIC WA NT Beginner', cursive;
+  margin: 0.5em 0 .5em;
+
 }
 
 p {
@@ -47,7 +45,7 @@ object {
 
 
 .about nav a {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .done {

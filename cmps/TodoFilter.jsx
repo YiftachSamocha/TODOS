@@ -40,6 +40,7 @@ export function TodoFilter({ filterBy, onSetFilterBy }) {
         <section className="todo-filter">
             <h2>Filter Todos</h2>
             <form onSubmit={onSubmitFilter}>
+            <label htmlFor="txt">Text </label>
                 <input value={txt} onChange={handleChange}
                     type="search" placeholder="By Txt" id="txt" name="txt"
                 />

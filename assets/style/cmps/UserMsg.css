@@ -1,25 +1,23 @@
 .user-msg {
-    background-color: lightgray;
-    padding: .5em 1em;
     position: fixed;
-    bottom: 1em;
-    right: 1em;
+    top: 10px;
+    right: 10px;
+    padding: 15px;
+    margin: 0;
+    border-radius: 5px;
     color: white;
-    font-weight: bold;
-    border: 3px solid black;
-    border-radius: 2px;
+    z-index: 1000;
+    width: 300px;
 }
 
 .user-msg.success {
-    background-color: var(--clr1);
+    background-color: #28a745;
 }
 
 .user-msg.error {
-    background-color: var(--clr2);
+    background-color: #dc3545;
 }
 
-
-.user-msg button{
-    float: right;
-    margin: 1em;
+.user-msg.info {
+    background-color: #17a2b8;
 }

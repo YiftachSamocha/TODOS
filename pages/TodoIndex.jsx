@@ -24,7 +24,6 @@ export function TodoIndex() {
     useEffect(() => {
         setSearchParams(filterBy)
         loadTodos()
-            .then(() => showSuccessMsg('Todos loaded successfully'))
             .catch(() => showErrorMsg('Cannot load todos'))
     }, [filterBy])
 
@@ -44,6 +43,7 @@ export function TodoIndex() {
             <div style={{ width: '60%', margin: 'auto' }}>
                 <DataTable todos={todos} />
             </div>
+            
         </section>
     )
 }

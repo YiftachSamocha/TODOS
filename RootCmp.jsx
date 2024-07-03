@@ -12,11 +12,12 @@ import { TodoEdit } from "./pages/TodoEdit.jsx"
 import { AboutTeam } from "./cmps/AboutTeam.jsx"
 import { AboutVision } from "./cmps/AboutVision.jsx"
 import { Dashboard } from "./pages/Dashboard.jsx"
+import { UserMsg } from './cmps/UserMsg.jsx'
 
 export function RootCmp() {
 
     return (
-        <Provider store= {store}>
+        <Provider store={store}>
             <Router>
                 <section className="app main-layout">
                     <AppHeader />
@@ -35,6 +36,7 @@ export function RootCmp() {
 
                         </Routes>
                     </main>
+                    <UserMsg />
                 </section>
             </Router>
         </Provider>

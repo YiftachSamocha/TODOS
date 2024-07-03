@@ -1,22 +1,28 @@
-.todo-details {
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-.todo-details h1.done {
-    text-decoration: line-through;
-    color: green;
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
 }
 
-.todo-details h2 {
-    font-size: 1.2em;
-    color: #555;
-}
-
-.todo-details button {
+.login-form input {
+    padding: 10px;
     margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-form button {
+    margin-top: 20px;
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -25,19 +31,19 @@
     cursor: pointer;
 }
 
-.todo-details button:hover {
+.login-form button:hover {
     background-color: #0056b3;
 }
 
-.todo-details div {
+.btns {
     margin-top: 20px;
 }
 
-.todo-details a {
+.btns a {
     color: #007bff;
     text-decoration: none;
 }
 
-.todo-details a:hover {
+.btns a:hover {
     text-decoration: underline;
 }

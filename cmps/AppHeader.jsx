@@ -3,7 +3,6 @@ const { Link, NavLink } = ReactRouterDOM
 const { useNavigate } = ReactRouter
 
 import { userService } from '../services/user.service.js'
-import { UserMsg } from "./UserMsg.jsx"
 import { LoginSignup } from './LoginSignup.jsx'
 import { showErrorMsg } from '../services/event-bus.service.js'
 
@@ -48,7 +47,7 @@ export function AppHeader() {
                     <NavLink to="/dashboard" >Dashboard</NavLink>
                 </nav>
             </section>
-            <UserMsg />
+            
         </header>
     )
 }
