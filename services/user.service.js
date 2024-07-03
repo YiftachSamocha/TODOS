@@ -56,8 +56,8 @@ function _setLoggedinUser(user) {
 function getEmptyCredentials() {
     return {
         fullname: '',
-        username: 'muki',
-        password: 'muki1',
+        username: '',
+        password: '',
     }
 }
 

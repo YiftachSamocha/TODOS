@@ -1,35 +1,30 @@
-const { useState } = React
 const { Link, NavLink } = ReactRouterDOM
-const { useNavigate } = ReactRouter
+const { useSelector } = ReactRedux
 
-import { userService } from '../services/user.service.js'
 import { LoginSignup } from './LoginSignup.jsx'
-import { showErrorMsg } from '../services/event-bus.service.js'
+import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
+import { logout } from '../store/user.actions.js'
 
 
 export function AppHeader() {
-    const navigate = useNavigate()
-    const [user, setUser] = useState(userService.getLoggedinUser())
-    
+    const user = useSelector(state => state.user)
+
     function onLogout() {
-        userService.logout()
+        logout()
             .then(() => {
-                onSetUser(null)
+                showSuccessMsg('Logged out successfully')
             })
             .catch((err) => {
                 showErrorMsg('OOPs try again')
             })
     }
 
-    function onSetUser(user) {
-        setUser(user)
-        navigate('/')
-    }
+
     return (
         <header className="app-header full main-layout">
             <section className="header-container">
                 <h1>React Todo App</h1>
-                {user ? (
+                {Object.keys(user).length !== 0 ? (
                     < section >
 
                         <Link to={`/user/${user._id}`}>Hello {user.fullname}</Link>
@@ -37,7 +32,7 @@ export function AppHeader() {
                     </ section >
                 ) : (
                     <section>
-                        <LoginSignup onSetUser={onSetUser} />
+                        <LoginSignup />
                     </section>
                 )}
                 <nav className="app-nav">
@@ -47,7 +42,7 @@ export function AppHeader() {
                     <NavLink to="/dashboard" >Dashboard</NavLink>
                 </nav>
             </section>
-            
+
         </header>
     )
 }

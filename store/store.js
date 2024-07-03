@@ -7,6 +7,8 @@ export const ADD_TODO = 'ADD_TODO'
 
 export const SET_FILTER_BY = 'SET_FILTER_BY'
 
+export const SET_USER = 'SET_USER'
+
 const initalState = {
     todos: [],
     isLoading: false,
@@ -32,6 +34,10 @@ function appReducer(state = initalState, action = {}) {
         //FILTER BY
         case SET_FILTER_BY:
             return { ...state, filterBy: { ...action.filterBy } }
+
+        //USER
+        case SET_USER:
+            return { ...state, user: { ...action.currUser } }
 
         default:
             return state
