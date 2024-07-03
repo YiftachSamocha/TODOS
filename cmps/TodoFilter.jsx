@@ -12,7 +12,11 @@ export function TodoFilter() {
         dispatch({ type: SET_FILTER_BY, filterBy })
     }
 
-    const [filterByToEdit, setFilterByToEdit] = useState({ ...filterBy })
+    const [filterByToEdit, setFilterByToEdit] = useState({
+        txt: filterBy.txt || '',
+        importance: filterBy.importance || '',
+        type: filterBy.type || 'all',
+    })
 
     useEffect(() => {
         onSetFilterBy(filterByToEdit)
@@ -32,15 +36,15 @@ export function TodoFilter() {
                 value = target.checked
                 break
 
+
             default: break
         }
 
         setFilterByToEdit(prevFilter => ({ ...prevFilter, [field]: value }))
-        onSetFilterBy(filterByToEdit)
     }
 
 
-    const { txt, importance } = filterByToEdit
+    const { txt, importance, type } = filterByToEdit
     return (
         <section className="todo-filter">
             <h2>Filter Todos</h2>
@@ -53,6 +57,12 @@ export function TodoFilter() {
                 <input value={importance} onChange={handleChange}
                     type="number" placeholder="By Importance" id="importance" name="importance"
                 />
+                <label htmlFor="type">Type</label>
+                <select name="type" id="type" value={type} onChange={handleChange}>
+                    <option value="all">All</option>
+                    <option value="done">Done</option>
+                    <option value="active">Active</option>
+                </select>
 
             </form>
         </section>

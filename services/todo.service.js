@@ -14,7 +14,6 @@ export const todoService = {
     getFilterFromSearchParams,
     getImportanceStats,
 }
-// For Debug (easy access from console):
 window.cs = todoService
 
 function query(filterBy = {}) {
@@ -27,6 +26,10 @@ function query(filterBy = {}) {
 
             if (filterBy.importance) {
                 todos = todos.filter(todo => todo.importance >= filterBy.importance)
+            }
+
+            if (filterBy.type === 'done') {
+                todos = todos.filter(todo => todo.isDone)
             }
 
             return todos
@@ -47,11 +50,11 @@ function remove(todoId) {
 
 function save(todo) {
     if (todo._id) {
-        // TODO - updatable fields
         todo.updatedAt = Date.now()
         return storageService.put(TODO_KEY, todo)
     } else {
         todo.createdAt = todo.updatedAt = Date.now()
+        todo.color = _getRandomColor()
 
         return storageService.post(TODO_KEY, todo)
     }
@@ -85,6 +88,7 @@ function getImportanceStats() {
 
 }
 
+
 function _createTodos() {
     let todos = utilService.loadFromStorage(TODO_KEY)
     if (!todos || !todos.length) {
@@ -102,6 +106,7 @@ function _createTodo(txt, importance) {
     const todo = getEmptyTodo(txt, importance)
     todo._id = utilService.makeId()
     todo.createdAt = todo.updatedAt = Date.now() - utilService.getRandomIntInclusive(0, 1000 * 60 * 60 * 24)
+    todo.color = _getRandomColor()
     return todo
 }
 
@@ -124,6 +129,24 @@ function _getTodoCountByImportanceMap(todos) {
         return map
     }, { low: 0, normal: 0, urgent: 0 })
     return todoCountByImportanceMap
+}
+
+
+function _getRandomColor() {
+    const colors = [
+        "#ffd1dc",
+        "#aec6cf",
+        "#c3e8a8",
+        "#fdfd96",
+        "#caa9fa",
+        "#ffb347",
+        "#baffc9",
+        "#ffb3ba",
+        "#e6e6fa",
+        "#ffdcb3"
+    ]
+    const randomIndex = Math.floor(Math.random() * colors.length)
+    return colors[randomIndex]
 }
 
 

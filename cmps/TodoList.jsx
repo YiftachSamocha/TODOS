@@ -6,6 +6,8 @@ const { Link } = ReactRouterDOM
 export function TodoList({ todos }) {
 
     function onRemoveTodo(todoId) {
+        const sure = confirm('Are you sure you want to remove this todo?')
+        if (!sure) return
         removeTodo(todoId)
             .then(() => {
                 showSuccessMsg(`Todo removed`)
@@ -20,7 +22,7 @@ export function TodoList({ todos }) {
         <ul className="todo-list">
             {todos.map(todo =>
                 <li key={todo._id}>
-                    <TodoPreview todo={todo}  />
+                    <TodoPreview todo={todo} />
                     <section>
                         <button onClick={() => onRemoveTodo(todo._id)}>Remove</button>
                         <button><Link to={`/todo/${todo._id}`}>Details</Link></button>

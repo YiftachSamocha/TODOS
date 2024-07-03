@@ -1,4 +1,4 @@
-import { ADD_TODO, REMOVE_TODO, SET_TODOS, UPDATE_TODO, store } from "./store.js";
+import { ADD_TODO, REMOVE_TODO, SET_DONE_PERCENT, SET_TODOS, UPDATE_TODO, store } from "./store.js";
 
 import { todoService } from "../services/todo.service.js";
 
@@ -20,7 +20,5 @@ export function saveTodo(todo) {
     else {
         return todoService.save(todo)
             .then(savedTodo => store.dispatch({ type: ADD_TODO, todo: savedTodo }))
-
     }
-
 }

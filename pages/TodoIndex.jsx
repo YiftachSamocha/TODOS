@@ -28,7 +28,7 @@ export function TodoIndex() {
             })
             .finally(() => dispatch({ type: SET_IS_LOADING, isLoading: false }))
 
-    }, [])
+    }, [filterBy])
 
 
     if (todos.length === 0) dispatch({ type: SET_IS_LOADING, isLoading: true })

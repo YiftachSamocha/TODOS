@@ -11,6 +11,7 @@ export const SET_USER = 'SET_USER'
 
 export const SET_IS_LOADING = 'SET_IS_LOADING'
 
+
 const initalState = {
     todos: [],
     isLoading: false,
@@ -44,6 +45,7 @@ function appReducer(state = initalState, action = {}) {
         //IS LOADING
         case SET_IS_LOADING:
             return { ...state, isLoading: action.isLoading }
+
 
         default:
             return state
