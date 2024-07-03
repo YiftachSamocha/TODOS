@@ -1,19 +1,32 @@
+import { showErrorMsg, showSuccessMsg } from "../../services/event-bus.service.js"
+import { removeTodo } from "../../store/todo.actions.js"
+
 const { useState, Fragment } = React
 const { Link } = ReactRouterDOM
 
-export function DataTableRow({ todo, onRemoveTodo }) {
+export function DataTableRow({ todo }) {
+
+    function onRemoveTodo(todoId) {
+        removeTodo(todoId)
+            .then(() => {
+                showSuccessMsg(`Todo removed`)
+            })
+            .catch(err => {
+                showErrorMsg('Cannot remove todo ' + todoId)
+            })
+    }
 
     const [isExpanded, setIsExpanded] = useState(false)
 
     return <Fragment>
         <tr>
-            <td  className="toggle-expand" onClick={() => {
+            <td className="toggle-expand" onClick={() => {
                 setIsExpanded(!isExpanded)
             }}>
                 {(isExpanded) ? '-' : '+'}
             </td>
             <td>{todo._id}</td>
-            <td className={(todo.isDone)? 'done' : ''}>{todo.txt}</td>
+            <td className={(todo.isDone) ? 'done' : ''}>{todo.txt}</td>
             <td>{todo.importance}</td>
             <td>
                 <Link to={`/todo/${todo._id}`}>Details</Link> |
