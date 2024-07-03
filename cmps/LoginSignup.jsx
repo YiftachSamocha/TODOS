@@ -37,7 +37,7 @@ export function LoginSignup() {
                 showSuccessMsg('Signed in successfully')
                 navigate('/')
             })
-            .catch((err) => showErrorMsg('Oops try again'))
+            .catch(() => showErrorMsg('Oops try again'))
     }
 
     return (
