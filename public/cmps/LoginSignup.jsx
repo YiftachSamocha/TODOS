@@ -1,5 +1,5 @@
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
-import { userService } from '../services/user.service.js'
+import { userFrontService } from '../services/user.front.service.js'
 import { login, signup } from '../store/user.actions.js'
 
 const { useState } = React
@@ -7,7 +7,7 @@ const { useNavigate } = ReactRouter
 
 export function LoginSignup() {
     const [isSignup, setIsSignUp] = useState(false)
-    const [credentials, setCredentials] = useState(userService.getEmptyCredentials())
+    const [credentials, setCredentials] = useState(userFrontService.getEmptyCredentials())
 
     const navigate = useNavigate()
 
@@ -28,7 +28,7 @@ export function LoginSignup() {
                 showSuccessMsg('Logged in successfully')
                 navigate('/')
             })
-            .catch(() => showErrorMsg('Oops try again'))
+            .catch(() => showErrorMsg('Wrong username or password'))
     }
 
     function onSignup(credentials) {
@@ -37,7 +37,7 @@ export function LoginSignup() {
                 showSuccessMsg('Signed in successfully')
                 navigate('/')
             })
-            .catch(() => showErrorMsg('Oops try again'))
+            .catch(() => showSuccessMsg('Cannot sign up'))
     }
 
     return (

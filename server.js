@@ -3,6 +3,7 @@ import express, { json } from 'express'
 import cookieParser from 'cookie-parser'
 import { loggerService } from './services/logger.service.js'
 import { todoBackService } from './services/todo.back.service.js'
+import { userBackService } from './services/user.back.service.js'
 
 const app = express()
 app.use(express.static('public'))
@@ -60,6 +61,33 @@ app.delete('/api/todo/:id', (req, res) => {
             loggerService.error('Cannot remove todo', err)
             res.status(400).send('Cannot remove todo')
         })
+})
+
+//USER
+
+app.post('/api/user/signup', (req, res) => {
+    const userToSignup = req.body
+    userBackService.signup(userToSignup)
+        .then(user => res.send(user))
+        .catch((err) => {
+            loggerService.error('Cannot signup', err)
+            res.status(400).send('Cannot signup')
+        })
+})
+
+app.post('/api/user/login', (req, res) => {
+    const userToLogin = req.body
+    userBackService.login(userToLogin)
+        .then(user => res.send(user))
+        .catch((err) => {
+            loggerService.error('Cannot login', err)
+            res.status(400).send('Cannot login')
+            return err
+        })
+})
+
+app.delete('/api/user/logout', (req, res) => {
+    res.send('Logged out!')
 })
 
 
