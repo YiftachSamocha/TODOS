@@ -1,7 +1,7 @@
-import { todoService } from "../services/todo.service.js"
 import { showErrorMsg } from "../services/event-bus.service.js"
 import { SET_IS_LOADING } from "../store/store.js"
 import { Loader } from "../cmps/Loader.jsx"
+import { todoFrontService } from "../services/todo.front.service.js"
 
 const { useState, useEffect } = React
 const { useParams, useNavigate, Link } = ReactRouterDOM
@@ -21,7 +21,7 @@ export function TodoDetails() {
 
 
     function loadTodo() {
-        todoService.get(params.todoId)
+        todoFrontService.getById(params.todoId)
             .then(setTodo)
             .catch(() => {
                 showErrorMsg('Cannot load todo')

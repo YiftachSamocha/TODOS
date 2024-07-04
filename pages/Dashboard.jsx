@@ -1,6 +1,7 @@
 const { useEffect, useState } = React
 import { Chart } from '../cmps/Chart.jsx'
-import { todoService } from '../services/todo.service.js'
+import { todoFrontService } from '../services/todo.front.service.js'
+
 
 export function Dashboard() {
 
@@ -8,9 +9,9 @@ export function Dashboard() {
     const [importanceStats, setImportanceStats] = useState([])
 
     useEffect(() => {
-        todoService.query()
+        todoFrontService.query()
             .then(setTodos)
-        todoService.getImportanceStats()
+        todoFrontService.getImportanceStats()
             .then(setImportanceStats)
     }, [])
 

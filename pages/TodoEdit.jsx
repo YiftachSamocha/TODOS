@@ -1,12 +1,12 @@
-import { todoService } from "../services/todo.service.js"
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service.js"
 import { saveTodo } from "../store/todo.actions.js"
+import { todoFrontService } from "../services/todo.front.service.js"
 
 const { useState, useEffect } = React
 const { useNavigate, useParams } = ReactRouterDOM
 
 export function TodoEdit() {
-    const [todoToEdit, setTodoToEdit] = useState(todoService.getEmptyTodo())
+    const [todoToEdit, setTodoToEdit] = useState(todoFrontService.getEmptyTodo())
     const navigate = useNavigate()
     const params = useParams()
 
@@ -15,7 +15,7 @@ export function TodoEdit() {
     }, [])
 
     function loadTodo() {
-        todoService.get(params.todoId)
+        todoFrontService.getById(params.todoId)
             .then(setTodoToEdit)
             .catch(err => console.log('err:', err))
     }
@@ -44,9 +44,9 @@ export function TodoEdit() {
     function onSaveTodo(ev) {
         ev.preventDefault()
         saveTodo(todoToEdit)
-            .then((savedTodo) => {
+            .then(() => {
                 navigate('/todo')
-                showSuccessMsg(`Todo Saved (id: ${savedTodo._id})`)
+                showSuccessMsg('Todo Saved')
             })
             .catch(() => {
                 showErrorMsg('Cannot save todo')
