@@ -11,6 +11,7 @@ export function TodoList({ todos }) {
     function onRemoveTodo(todoId) {
         const sure = confirm('Are you sure you want to remove this todo?')
         if (!sure) return
+        const deletedTodoTxt = todos.find(todo => todo._id === todoId).txt
         removeTodo(todoId)
             .then(() => {
                 showSuccessMsg(`Todo removed`)
@@ -18,7 +19,10 @@ export function TodoList({ todos }) {
             .then(() => {
                 if (!user || Object.keys(user).length === 0) return
                 const updatedUser = {
-                    ...user, activities: [...user.activities, { txt: 'Removed a todo', at: new Date() }]
+                    ...user,
+                    activities: [...user.activities,
+                    { action: 'Removed a todo', txt: deletedTodoTxt, at: new Date() }
+                    ]
                 }
                 updateUser(updatedUser)
             })

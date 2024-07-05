@@ -25,7 +25,7 @@ export function TodoPreview({ todo }) {
                 const updatedUser = {
                     ...user,
                     balance: isDone ? user.balance : user.balance + 10,
-                    activities: [...user.activities, { txt: isCompleted + ' a todo', at: new Date() }]
+                    activities: [...user.activities, { action: isCompleted + ' a todo', txt: updatedTodo.txt, at: new Date() }]
                 }
                 updateUser(updatedUser)
             })

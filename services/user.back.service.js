@@ -10,7 +10,7 @@ function signup(user) {
     user.createdAt = Date.now()
     user._id = utilService.makeId()
     user.balance = 0
-    user.activities = [{ txt: 'Signed up', at: new Date() }]
+    user.activities = [{ action: 'Signed up', txt: '', at: new Date() }]
     user.prefs = { color: 'black', bgColor: 'white' }
 
     users.push(user)
@@ -30,15 +30,15 @@ function login(userToFind) {
     const foundUser = users.find(user => user.username === userToFind.username && user.password === userToFind.password)
     if (!foundUser) return Promise.reject('Wrong password or username')
     const { _id, fullname, balance, activities, prefs } = foundUser
-    const userToSave = { _id, fullname, balance, activities, prefs }
+    const userToSave = { _id, fullname, balance, activities: activities.push({ action: 'Logged in', txt: '', at: new Date() }), prefs }
     return Promise.resolve(userToSave)
 }
 
 function updateUser(userToUpdate) {
     users = users.map(user => {
         if (userToUpdate._id === user._id) {
-            const { balance, activities, prefs } = userToUpdate
-            return { ...user, balance, activities, prefs }
+            const { balance, fullname, activities, prefs } = userToUpdate
+            return { ...user, balance, fullname, activities, prefs }
         }
         else return user
     })
@@ -80,7 +80,7 @@ function _createData(length = 6) {
                 createdAt: new Date(),
                 updatedAt: new Date(),
                 balance: 0,
-                activities: [{ txt: 'Created by computer', at: new Date() }],
+                activities: [{ action: 'Created by computer', txt: '', at: new Date() }],
                 prefs: { color: 'black', bgColor: 'white' }
 
             }

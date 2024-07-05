@@ -55,7 +55,7 @@ export function TodoEdit() {
                 if (!user || Object.keys(user).length === 0) return
                 const addOrEdit = params.todoId ? 'Updated' : 'Added'
                 const updatedUser = {
-                    ...user, activities: [...user.activities, { txt: addOrEdit + ' a todo', at: new Date() }]
+                    ...user, activities: [...user.activities, { action: addOrEdit + ' a todo', txt: todoToEdit.txt, at: new Date() }]
                 }
                 updateUser(updatedUser)
             })

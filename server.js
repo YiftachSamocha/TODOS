@@ -65,9 +65,9 @@ app.delete('/api/todo/:id', (req, res) => {
 
 //USER
 
-app.get('/api/user', (req, res) => {
-    const { userId } = req.params
-    userBackService.getById(userId)
+app.get('/api/user/:id', (req, res) => {
+    const { id } = req.params
+    userBackService.getById(id)
         .then(user => res.send(user))
         .catch((err) => {
             loggerService.error('Cannot find user', err)

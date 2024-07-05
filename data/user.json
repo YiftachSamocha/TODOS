@@ -1,16 +1,67 @@
 [
   {
-    "_id": "jd7klk",
-    "fullname": "happens",
-    "username": "bit by bit",
-    "password": "from various people",
-    "createdAt": "2024-07-05T02:49:57.090Z",
-    "updatedAt": "2024-07-05T02:49:57.090Z",
+    "_id": "Ww5pi6",
+    "fullname": "mofmfvxxxxx",
+    "username": "Wolf",
+    "password": "Rabbit",
+    "createdAt": "2024-07-05T15:04:22.812Z",
+    "updatedAt": "2024-07-05T15:04:22.812Z",
+    "balance": 10,
+    "activities": [
+      {
+        "action": "Created by computer",
+        "txt": "",
+        "at": "2024-07-05T15:04:22.812Z"
+      },
+      {
+        "action": "Logged in",
+        "txt": "",
+        "at": "2024-07-05T15:16:04.567Z"
+      },
+      {
+        "action": "Logged in",
+        "txt": "",
+        "at": "2024-07-05T15:23:03.799Z"
+      },
+      {
+        "action": "Completed a todo",
+        "txt": "Master CSS11",
+        "at": "2024-07-05T15:23:39.802Z"
+      },
+      {
+        "action": "Removed a todo",
+        "txt": "Master CSS1",
+        "at": "2024-07-05T15:23:43.290Z"
+      },
+      {
+        "action": "Added a todo",
+        "txt": "sss",
+        "at": "2024-07-05T15:23:49.246Z"
+      },
+      {
+        "action": "Updated a todo",
+        "txt": "Learn React6",
+        "at": "2024-07-05T15:23:56.209Z"
+      }
+    ],
+    "prefs": {
+      "color": "#e52424",
+      "bgColor": "#583c47"
+    }
+  },
+  {
+    "_id": "7AQEQr",
+    "fullname": "Eve",
+    "username": "Trent",
+    "password": "Tiger",
+    "createdAt": "2024-07-05T15:04:22.812Z",
+    "updatedAt": "2024-07-05T15:04:22.812Z",
     "balance": 0,
     "activities": [
       {
-        "txt": "Created by computer",
-        "at": "2024-07-05T02:49:57.090Z"
+        "action": "Created by computer",
+        "txt": "",
+        "at": "2024-07-05T15:04:22.812Z"
       }
     ],
     "prefs": {
@@ -19,17 +70,18 @@
     }
   },
   {
-    "_id": "rMYMj9",
-    "fullname": "it",
-    "username": "had",
-    "password": "bit by bit",
-    "createdAt": "2024-07-05T02:49:57.090Z",
-    "updatedAt": "2024-07-05T02:49:57.090Z",
+    "_id": "nrxA8W",
+    "fullname": "Parrot",
+    "username": "Rabbit",
+    "password": "Giraffe",
+    "createdAt": "2024-07-05T15:04:22.812Z",
+    "updatedAt": "2024-07-05T15:04:22.812Z",
     "balance": 0,
     "activities": [
       {
-        "txt": "Created by computer",
-        "at": "2024-07-05T02:49:57.090Z"
+        "action": "Created by computer",
+        "txt": "",
+        "at": "2024-07-05T15:04:22.812Z"
       }
     ],
     "prefs": {
@@ -38,17 +90,18 @@
     }
   },
   {
-    "_id": "21vpE5",
-    "fullname": "this happened",
-    "username": "more or less",
-    "password": "to",
-    "createdAt": "2024-07-05T02:49:57.090Z",
-    "updatedAt": "2024-07-05T02:49:57.090Z",
+    "_id": "XgLfmK",
+    "fullname": "David",
+    "username": "Eagle",
+    "password": "Alice",
+    "createdAt": "2024-07-05T15:04:22.812Z",
+    "updatedAt": "2024-07-05T15:04:22.812Z",
     "balance": 0,
     "activities": [
       {
-        "txt": "Created by computer",
-        "at": "2024-07-05T02:49:57.090Z"
+        "action": "Created by computer",
+        "txt": "",
+        "at": "2024-07-05T15:04:22.812Z"
       }
     ],
     "prefs": {
@@ -57,17 +110,18 @@
     }
   },
   {
-    "_id": "Uofdf7",
-    "fullname": "more or less",
-    "username": "it",
-    "password": "the port",
-    "createdAt": "2024-07-05T02:49:57.090Z",
-    "updatedAt": "2024-07-05T02:49:57.090Z",
+    "_id": "pbsIy0",
+    "fullname": "Zebra",
+    "username": "Oscar",
+    "password": "Yvonne",
+    "createdAt": "2024-07-05T15:04:22.812Z",
+    "updatedAt": "2024-07-05T15:04:22.812Z",
     "balance": 0,
     "activities": [
       {
-        "txt": "Created by computer",
-        "at": "2024-07-05T02:49:57.090Z"
+        "action": "Created by computer",
+        "txt": "",
+        "at": "2024-07-05T15:04:22.812Z"
       }
     ],
     "prefs": {
@@ -76,17 +130,18 @@
     }
   },
   {
-    "_id": "RsS8g1",
-    "fullname": "a different story",
-    "username": "a different story",
-    "password": "I",
-    "createdAt": "2024-07-05T02:49:57.090Z",
-    "updatedAt": "2024-07-05T02:49:57.090Z",
+    "_id": "vbrbLj",
+    "fullname": "Owl",
+    "username": "Charlie",
+    "password": "Faythe",
+    "createdAt": "2024-07-05T15:04:22.812Z",
+    "updatedAt": "2024-07-05T15:04:22.812Z",
     "balance": 0,
     "activities": [
       {
-        "txt": "Created by computer",
-        "at": "2024-07-05T02:49:57.090Z"
+        "action": "Created by computer",
+        "txt": "",
+        "at": "2024-07-05T15:04:22.812Z"
       }
     ],
     "prefs": {
@@ -95,22 +150,86 @@
     }
   },
   {
-    "_id": "InZ1D9",
-    "fullname": "a live channel",
-    "username": "as generally",
-    "password": "burn",
-    "createdAt": "2024-07-05T02:49:57.090Z",
-    "updatedAt": "2024-07-05T02:49:57.090Z",
-    "balance": 0,
+    "fullname": "wolf",
+    "username": "wolf",
+    "password": "wolf",
+    "createdAt": 1720192230478,
+    "_id": "6Ssil4",
+    "balance": 20,
     "activities": [
       {
-        "txt": "Created by computer",
-        "at": "2024-07-05T02:49:57.090Z"
+        "action": "Signed up",
+        "txt": "",
+        "at": "2024-07-05T15:10:30.478Z"
+      },
+      {
+        "action": "Removed a todo",
+        "txt": "fddd",
+        "at": "2024-07-05T15:11:05.675Z"
+      },
+      {
+        "action": "Completed a todo",
+        "txt": "Learn React7",
+        "at": "2024-07-05T15:11:08.277Z"
+      },
+      {
+        "action": "Removed a todo",
+        "txt": "Learn React4",
+        "at": "2024-07-05T15:11:22.888Z"
+      },
+      {
+        "action": "Completed a todo",
+        "txt": "Master CSS1",
+        "at": "2024-07-05T15:11:26.043Z"
+      },
+      {
+        "action": "Unompleted a todo",
+        "txt": "Master CSS1",
+        "at": "2024-07-05T15:11:26.732Z"
+      },
+      {
+        "action": "Added a todo",
+        "txt": "sexxxx",
+        "at": "2024-07-05T15:11:47.694Z"
+      },
+      {
+        "action": "Updated a todo",
+        "txt": "aaaa",
+        "at": "2024-07-05T15:12:10.739Z"
+      },
+      {
+        "action": "Logged in",
+        "txt": "",
+        "at": "2024-07-05T15:14:03.793Z"
+      },
+      {
+        "action": "Logged in",
+        "txt": "",
+        "at": "2024-07-05T15:14:52.815Z"
       }
     ],
     "prefs": {
-      "color": "black",
-      "bgColor": "white"
+      "color": "#f26363",
+      "bgColor": "#8421fd"
+    }
+  },
+  {
+    "fullname": "skssksksk",
+    "username": "mi",
+    "password": "mi",
+    "createdAt": 1720193065035,
+    "_id": "7sVheb",
+    "balance": 0,
+    "activities": [
+      {
+        "action": "Signed up",
+        "txt": "",
+        "at": "2024-07-05T15:24:25.035Z"
+      }
+    ],
+    "prefs": {
+      "color": "#db1f1f",
+      "bgColor": "#1dbf1f"
     }
   }
 ]
