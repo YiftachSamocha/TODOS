@@ -1,4 +1,6 @@
-export const userFrontService = { signup, login, logout, updateUser, getEmptyCredentials }
+import { utilService } from "./util.service.js"
+
+export const userFrontService = { signup, login, logout, updateUser, getById, getEmptyUser, getEmptyCredentials }
 
 const BASE_URL = '/api/user'
 const STORAGE_KEY_LOGGEDIN = 'CURR USER:'
@@ -36,10 +38,37 @@ function updateUser(userToUpdate) {
         .then(res => res.data)
 }
 
+function getById(userId) {
+    return axios.get(BASE_URL + '/' + userId)
+        .then(res => res.data)
+}
+
 function getEmptyCredentials() {
     return {
         fullname: '',
         username: '',
         password: '',
+    }
+}
+
+function getEmptyUser() {
+    return {
+        _id: utilService.makeId(),
+        fullname: '',
+        username: '',
+        password: '',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        balance: 0,
+        activities: [
+            {
+                txt: "Created by computer",
+                at: new Date()
+            }
+        ],
+        prefs: {
+            color: "black",
+            bgColor: "white"
+        }
     }
 }

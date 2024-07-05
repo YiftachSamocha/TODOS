@@ -65,6 +65,16 @@ app.delete('/api/todo/:id', (req, res) => {
 
 //USER
 
+app.get('/api/user', (req, res) => {
+    const { userId } = req.params
+    userBackService.getById(userId)
+        .then(user => res.send(user))
+        .catch((err) => {
+            loggerService.error('Cannot find user', err)
+            res.status(400).send('Cannot find user')
+        })
+})
+
 app.post('/api/user/signup', (req, res) => {
     const userToSignup = req.body
     userBackService.signup(userToSignup)

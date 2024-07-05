@@ -1,7 +1,7 @@
 import { utilService } from "../public/services/util.service.js"
 import { utilBackService } from "./util.back.service.js"
 
-export const userBackService = { signup, login, updateUser }
+export const userBackService = { signup, login, updateUser, getById }
 
 var users = utilBackService.readJsonFile('./data/user.json')
 _createData()
@@ -11,6 +11,7 @@ function signup(user) {
     user._id = utilService.makeId()
     user.balance = 0
     user.activities = [{ txt: 'Signed up', at: new Date() }]
+    user.prefs = { color: 'black', bgColor: 'white' }
 
     users.push(user)
     return utilBackService.writeJsonFile('./data/user.json', users)
@@ -19,7 +20,8 @@ function signup(user) {
                 _id: user._id,
                 fullname: user.fullname,
                 balance: user.balance,
-                activities: user.activities
+                activities: user.activities,
+                prefs: user.prefs
             }
         })
 }
@@ -27,17 +29,16 @@ function signup(user) {
 function login(userToFind) {
     const foundUser = users.find(user => user.username === userToFind.username && user.password === userToFind.password)
     if (!foundUser) return Promise.reject('Wrong password or username')
-    const { _id, fullname, balance, activities } = foundUser
-    const userToSave = { _id, fullname, balance, activities }
-    console.log(userToSave)
+    const { _id, fullname, balance, activities, prefs } = foundUser
+    const userToSave = { _id, fullname, balance, activities, prefs }
     return Promise.resolve(userToSave)
 }
 
 function updateUser(userToUpdate) {
     users = users.map(user => {
         if (userToUpdate._id === user._id) {
-            const { balance, activities } = userToUpdate
-            return { ...user, balance, activities }
+            const { balance, activities, prefs } = userToUpdate
+            return { ...user, balance, activities, prefs }
         }
         else return user
     })
@@ -48,8 +49,23 @@ function updateUser(userToUpdate) {
                 fullname: userToUpdate.fullname,
                 balance: userToUpdate.balance,
                 activities: userToUpdate.activities,
+                prefs: userToUpdate.prefs,
             }
         })
+}
+
+function getById(userId) {
+    const foundUser = users.find(user => user._id === userId)
+    const userToSend = {
+        _id: foundUser._id,
+        fullname: foundUser.fullname,
+        balance: foundUser.balance,
+        activities: foundUser.activities,
+        prefs: foundUser.prefs,
+    }
+    return Promise.resolve(userToSend)
+
+
 }
 
 function _createData(length = 6) {
@@ -64,7 +80,9 @@ function _createData(length = 6) {
                 createdAt: new Date(),
                 updatedAt: new Date(),
                 balance: 0,
-                activities: [{ txt: 'Created by computer', at: new Date() }]
+                activities: [{ txt: 'Created by computer', at: new Date() }],
+                prefs: { color: 'black', bgColor: 'white' }
+
             }
             newUsers.push(user)
         }
