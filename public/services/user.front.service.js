@@ -1,4 +1,4 @@
-export const userFrontService = { signup, login, logout, getEmptyCredentials }
+export const userFrontService = { signup, login, logout, updateUser, getEmptyCredentials }
 
 const BASE_URL = '/api/user'
 const STORAGE_KEY_LOGGEDIN = 'CURR USER:'
@@ -19,7 +19,7 @@ function login(userToLogin) {
             sessionStorage.setItem(STORAGE_KEY_LOGGEDIN, JSON.stringify(user))
             return user
         })
-        
+
 }
 
 function logout() {
@@ -29,6 +29,11 @@ function logout() {
             return res.data
         })
 
+}
+
+function updateUser(userToUpdate) {
+    return axios.put(BASE_URL + '/update', userToUpdate)
+        .then(res => res.data)
 }
 
 function getEmptyCredentials() {

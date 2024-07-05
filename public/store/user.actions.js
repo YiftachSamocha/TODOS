@@ -15,3 +15,8 @@ export function logout() {
     return userFrontService.logout()
         .then(() => store.dispatch({ type: SET_USER, currUser: null }))
 }
+
+export function updateUser(userToUpdate) {
+    return userFrontService.updateUser(userToUpdate)
+        .then(currUser => store.dispatch({ type: SET_USER, currUser }))
+}

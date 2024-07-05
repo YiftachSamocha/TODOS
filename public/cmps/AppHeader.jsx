@@ -14,10 +14,13 @@ export function AppHeader() {
     const todos = useSelector(state => state.todos)
 
     const [donePercent, setDonePercent] = useState(null)
+    const [balance, setBalance] = useState(user.balance)
 
     useEffect(() => {
         getDonePercent(todos)
-    }, [todos])
+        setBalance(user.balance)
+
+    }, [todos, user])
 
     function getDonePercent(todos) {
         const todosSum = todos.length
@@ -26,6 +29,8 @@ export function AppHeader() {
         const percent = (doneTodosSum / todosSum) * 100
         setDonePercent(percent.toFixed(2))
     }
+
+
 
 
 
@@ -54,6 +59,7 @@ export function AppHeader() {
                     < section >
 
                         <Link to={`/user/${user._id}`}>Hello {user.fullname}</Link>
+                        <p>Balance: {balance}</p>
                         <button onClick={onLogout}>Logout</button>
                     </ section >
                 ) : (

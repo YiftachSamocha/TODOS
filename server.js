@@ -82,7 +82,16 @@ app.post('/api/user/login', (req, res) => {
         .catch((err) => {
             loggerService.error('Cannot login', err)
             res.status(400).send('Cannot login')
-            return err
+        })
+})
+
+app.put('/api/user/update', (req, res) => {
+    const userToUpdate = req.body
+    userBackService.updateUser(userToUpdate)
+        .then(user => res.send(user))
+        .catch((err) => {
+            loggerService.error('Cannot update', err)
+            res.status(400).send('Cannot update')
         })
 })
 
