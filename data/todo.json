@@ -81,12 +81,12 @@
     "color": "#caa9fa"
   },
   {
+    "_id": "vrUrqi",
     "txt": "Practice Redux13",
     "importance": 5,
-    "isDone": false,
-    "_id": "vrUrqi",
-    "updatedAt": 1720018852021,
+    "isDone": true,
     "createdAt": 1720018852021,
+    "updatedAt": 1720194171247,
     "color": "#ffb3ba"
   },
   {
@@ -104,8 +104,8 @@
     "importance": 3,
     "isDone": true,
     "createdAt": 1720016786225,
-    "updatedAt": 1720192330731,
-    "color": "#c3e8a8"
+    "updatedAt": 1720193457091,
+    "color": "#f7f9f6"
   },
   {
     "txt": "Master CSS16",
@@ -115,15 +115,6 @@
     "updatedAt": 1720034214963,
     "createdAt": 1720034214963,
     "color": "#caa9fa"
-  },
-  {
-    "txt": "Master CSS17",
-    "importance": 7,
-    "isDone": false,
-    "_id": "qSE9nk",
-    "updatedAt": 1720023340503,
-    "createdAt": 1720023340503,
-    "color": "#ffdcb3"
   },
   {
     "txt": "Master CSS19",
@@ -153,13 +144,13 @@
     "_id": "R9aZxA"
   },
   {
+    "_id": "OZ8vm9",
     "txt": "dgngf",
     "importance": 5,
     "isDone": true,
-    "updatedAt": 1720143668590,
     "createdAt": 1720143668590,
-    "color": "#ffd1dc",
-    "_id": "OZ8vm9"
+    "updatedAt": 1720193482134,
+    "color": "#b8143a"
   },
   {
     "txt": "sexxxx",
@@ -171,12 +162,21 @@
     "_id": "x1k827"
   },
   {
+    "_id": "zGnqvF",
     "txt": "sss",
     "importance": 5,
-    "isDone": false,
-    "updatedAt": 1720193029240,
+    "isDone": true,
     "createdAt": 1720193029240,
-    "color": "#ffdcb3",
-    "_id": "zGnqvF"
+    "updatedAt": 1720194166082,
+    "color": "#ffdcb3"
+  },
+  {
+    "txt": "ppp",
+    "importance": 5,
+    "isDone": false,
+    "updatedAt": 1720193642714,
+    "createdAt": 1720193642714,
+    "color": "#ffb347",
+    "_id": "kXJ54Y"
   }
 ]

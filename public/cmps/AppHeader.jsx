@@ -6,6 +6,7 @@ const { useEffect, useState } = React
 import { LoginSignup } from './LoginSignup.jsx'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
 import { logout } from '../store/user.actions.js'
+import { todoFrontService } from '../services/todo.front.service.js'
 
 
 
@@ -17,17 +18,22 @@ export function AppHeader() {
     const [balance, setBalance] = useState(user.balance)
 
     useEffect(() => {
-        getDonePercent(todos)
         setBalance(user.balance)
+        getDonePercent()
+
 
     }, [todos, user])
 
-    function getDonePercent(todos) {
-        const todosSum = todos.length
-        const doneTodos = todos.filter(todo => todo.isDone)
-        const doneTodosSum = doneTodos.length
-        const percent = (doneTodosSum / todosSum) * 100
-        setDonePercent(percent.toFixed(2))
+    function getDonePercent() {
+        todoFrontService.query({})
+            .then(allTodos => {
+                const todosSum = allTodos.length
+                const doneTodos = allTodos.filter(todo => todo.isDone)
+                const doneTodosSum = doneTodos.length
+                const percent = (doneTodosSum / todosSum) * 100
+                setDonePercent(percent.toFixed(2))
+            })
+
     }
 
 

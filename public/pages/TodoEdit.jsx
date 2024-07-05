@@ -37,6 +37,7 @@ export function TodoEdit() {
                 value = target.checked
                 break
 
+
             default:
                 break
         }
@@ -64,7 +65,7 @@ export function TodoEdit() {
             })
     }
 
-    const { txt, importance, isDone } = todoToEdit
+    const { txt, importance, isDone, color } = todoToEdit
 
 
 
@@ -77,6 +78,8 @@ export function TodoEdit() {
                 <label htmlFor="importance">Importance:</label>
                 <input onChange={handleChange} value={importance} type="number" name="importance" id="importance" />
 
+                <label htmlFor="color">Color:</label>
+                <input onChange={handleChange} value={color} type="color" name="color" id="color" />
                 <label htmlFor="isDone">isDone:</label>
                 <input onChange={handleChange} checked={isDone} type="checkbox" name="isDone" id="isDone" />
 

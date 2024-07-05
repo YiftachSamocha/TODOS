@@ -33,8 +33,8 @@ function save(todoToSave) {
     }
 }
 
-function getEmptyTodo(txt = '', importance = 5) {
-    return { txt, importance, isDone: false }
+function getEmptyTodo(txt = '', importance = 5, color = '#ffffff') {
+    return { txt, importance, isDone: false, color }
 }
 
 function getImportanceStats() {
