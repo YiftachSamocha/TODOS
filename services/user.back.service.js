@@ -11,7 +11,7 @@ function signup(user) {
     user._id = utilService.makeId()
     user.balance = 0
     user.activities = [{ action: 'Signed up', txt: '', at: new Date() }]
-    user.prefs = { color: 'black', bgColor: 'white' }
+    user.prefs = { color: '#000000', bgColor: '#ffffff' }
 
     users.push(user)
     return utilBackService.writeJsonFile('./data/user.json', users)
@@ -81,7 +81,7 @@ function _createData(length = 6) {
                 updatedAt: new Date(),
                 balance: 0,
                 activities: [{ action: 'Created by computer', txt: '', at: new Date() }],
-                prefs: { color: 'black', bgColor: 'white' }
+                prefs: { color: '#000000', bgColor: '#ffffff' }
 
             }
             newUsers.push(user)

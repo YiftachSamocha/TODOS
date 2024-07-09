@@ -1,6 +1,7 @@
 import { userFrontService } from "../services/user.front.service.js"
 import { utilService } from "../services/util.service.js"
-import { updateUser } from "../store/user.actions.js"
+import { updateUser } from "../store/actions/user.actions.js"
+
 
 const { useSelector } = ReactRedux
 const { useParams } = ReactRouterDOM
@@ -9,10 +10,10 @@ const { useEffect, useState } = React
 export function UserDetails() {
     const [user, setUser] = useState(userFrontService.getEmptyUser())
     const [fullname, setFullname] = useState('')
-    const [prefs, setPrefs] = useState({ color: '#ffffff', bgColor: '#000000' })
+    const [prefs, setPrefs] = useState({ color: '#000000', bgColor: '#ffffff' })
     const [isUserLogged, setIsUserLogged] = useState(false)
 
-    const currUser = useSelector(state => state.user)
+    const currUser = useSelector(state => state.userModule.user)
 
     const params = useParams()
 
@@ -23,7 +24,7 @@ export function UserDetails() {
                 else setIsUserLogged(false)
                 setUser(foundUser)
                 setFullname(foundUser.fullname)
-                setPrefs(foundUser.prefs || { color: '#ffffff', bgColor: '#000000' })
+                setPrefs(foundUser.prefs || { color: '#000000', bgColor: '#ffffff' })
 
             })
     }, [params.userId, currUser])

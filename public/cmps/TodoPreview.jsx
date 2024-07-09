@@ -1,12 +1,13 @@
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service.js"
-import { saveTodo } from "../store/todo.actions.js"
-import { updateUser } from "../store/user.actions.js"
+import { saveTodo } from "../store/actions/todo.actions.js"
+import { updateUser } from "../store/actions/user.actions.js"
+
 const { useState, useEffect } = React
 const { useSelector } = ReactRedux
 
 export function TodoPreview({ todo }) {
     const [isDone, setIsDone] = useState(false)
-    const user = useSelector(state => state.user)
+    const user = useSelector(state => state.userModule.user)
 
     useEffect(() => {
         if (todo.isDone) setIsDone(true)

@@ -1,8 +1,9 @@
-import { ADD_TODO, REMOVE_TODO, SET_TODOS, UPDATE_TODO, store } from "./store.js";
-import { todoFrontService } from "../services/todo.front.service.js";
+import { todoFrontService } from "../../services/todo.front.service.js";
+import { ADD_TODO, REMOVE_TODO, SET_TODOS, UPDATE_TODO } from "../reducers/todo.reducers.js";
+import { store } from "../store.js";
 
 export function loadTodos() {
-    const filterBy = store.getState().filterBy
+    const filterBy = store.getState().todoModule.filterBy
     return todoFrontService.query(filterBy)
         .then(todos => store.dispatch({ type: SET_TODOS, todos }))
         .catch(err => {
@@ -28,5 +29,4 @@ export function saveTodo(todo) {
             console.log('car action -> Cannot save todo', err)
             throw err
         })
-
 }

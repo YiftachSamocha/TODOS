@@ -65,7 +65,6 @@ function save(todoToSave) {
 
     } else {
         todoToSave.createdAt = todoToSave.updatedAt = Date.now()
-        todoToSave.color = _getRandomColor()
         todoToSave._id = utilService.makeId()
         todos.push(todoToSave)
     }

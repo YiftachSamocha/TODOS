@@ -30,7 +30,8 @@
 }
 
 .todo-details div {
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .todo-details a {

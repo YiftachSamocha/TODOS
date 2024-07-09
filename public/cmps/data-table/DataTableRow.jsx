@@ -1,5 +1,5 @@
 import { showErrorMsg, showSuccessMsg } from "../../services/event-bus.service.js"
-import { removeTodo } from "../../store/todo.actions.js"
+import { removeTodo } from "../../store/actions/todo.actions.js"
 
 const { useState, Fragment } = React
 const { Link } = ReactRouterDOM

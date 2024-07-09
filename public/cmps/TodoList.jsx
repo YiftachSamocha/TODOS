@@ -1,12 +1,12 @@
 import { showErrorMsg, showSuccessMsg } from "../services/event-bus.service.js"
-import { removeTodo } from "../store/todo.actions.js"
-import { updateUser } from "../store/user.actions.js"
+import { removeTodo } from "../store/actions/todo.actions.js"
+import { updateUser } from "../store/actions/user.actions.js"
 import { TodoPreview } from "./TodoPreview.jsx"
 const { Link } = ReactRouterDOM
 const { useSelector } = ReactRedux
 
 export function TodoList({ todos }) {
-    const user = useSelector(state => state.user)
+    const user = useSelector(state => state.userModule.user)
 
     function onRemoveTodo(todoId) {
         const sure = confirm('Are you sure you want to remove this todo?')

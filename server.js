@@ -42,8 +42,8 @@ app.put('/api/todo', (req, res) => {
 })
 
 app.post('/api/todo', (req, res) => {
-    const { txt, importance, isDone } = req.body
-    const todo = { txt, importance: Number(importance), isDone }
+    const { txt, importance, isDone, color } = req.body
+    const todo = { txt, importance: Number(importance), isDone, color }
     todoBackService.save(todo)
         .then(addedTodo => res.send(addedTodo))
         .catch((err) => {

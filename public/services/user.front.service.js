@@ -71,8 +71,8 @@ function getEmptyUser() {
             }
         ],
         prefs: {
-            color: "black",
-            bgColor: "white"
+            color: "#000000",
+            bgColor: "#ffffff"
         }
     }
 }

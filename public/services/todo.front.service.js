@@ -1,4 +1,4 @@
-export const todoFrontService = { query, remove, getById, save, getEmptyTodo, getImportanceStats }
+export const todoFrontService = { query, remove, getById, save, getEmptyFilter, getEmptyTodo, getImportanceStats }
 
 const BASE_URL = '/api/todo'
 
@@ -35,6 +35,16 @@ function save(todoToSave) {
 
 function getEmptyTodo(txt = '', importance = 5, color = '#ffffff') {
     return { txt, importance, isDone: false, color }
+}
+
+function getEmptyFilter() {
+    return {
+        txt: '',
+        importance: 0,
+        type: 'all',
+        sort: 'txt',
+        page: 1
+    }
 }
 
 function getImportanceStats() {

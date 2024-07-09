@@ -2,17 +2,14 @@ const { Link, NavLink } = ReactRouterDOM
 const { useSelector } = ReactRedux
 const { useEffect, useState } = React
 
-
 import { LoginSignup } from './LoginSignup.jsx'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
 import { logout } from '../store/user.actions.js'
 import { todoFrontService } from '../services/todo.front.service.js'
 
-
-
 export function AppHeader() {
-    const user = useSelector(state => state.user)
-    const todos = useSelector(state => state.todos)
+    const user = useSelector(state => state.userModule.user)
+    const todos = useSelector(state => state.todoModule.todos)
 
     const [donePercent, setDonePercent] = useState(null)
     const [balance, setBalance] = useState(user.balance)
@@ -20,8 +17,6 @@ export function AppHeader() {
     useEffect(() => {
         setBalance(user.balance)
         getDonePercent()
-
-
     }, [todos, user])
 
     function getDonePercent() {
@@ -36,10 +31,6 @@ export function AppHeader() {
 
     }
 
-
-
-
-
     function onLogout() {
         logout()
             .then(() => {
@@ -49,8 +40,6 @@ export function AppHeader() {
                 showErrorMsg('OOPs try again')
             })
     }
-
-
 
     return (
         <header className="app-header full main-layout">

@@ -2,7 +2,7 @@ const { useSelector } = ReactRedux
 const { useEffect, useState } = React
 
 export function AppFooter() {
-    const todos = useSelector(state => state.todos)
+    const todos = useSelector(state => state.todoModule.todos)
     const [donePercent, setDonePercent] = useState(null)
 
     useEffect(() => {

@@ -1,5 +1,7 @@
-import { userFrontService } from "../services/user.front.service.js";
-import { SET_USER, store } from "./store.js";
+import { userFrontService } from "../../services/user.front.service.js";
+import { SET_USER } from "../reducers/user.reducers.js";
+import { store } from "../store.js";
+
 
 export function signup(credentials) {
     return userFrontService.signup(credentials)

@@ -1,269 +1,51 @@
 [
   {
-    "_id": "Ww5pi6",
-    "fullname": "mofmfvxxxxx",
-    "username": "Wolf",
-    "password": "Rabbit",
-    "createdAt": "2024-07-05T15:04:22.812Z",
-    "updatedAt": "2024-07-05T15:04:22.812Z",
-    "balance": 10,
-    "activities": [
-      {
-        "action": "Created by computer",
-        "txt": "",
-        "at": "2024-07-05T15:04:22.812Z"
-      },
-      {
-        "action": "Logged in",
-        "txt": "",
-        "at": "2024-07-05T15:16:04.567Z"
-      },
-      {
-        "action": "Logged in",
-        "txt": "",
-        "at": "2024-07-05T15:23:03.799Z"
-      },
-      {
-        "action": "Completed a todo",
-        "txt": "Master CSS11",
-        "at": "2024-07-05T15:23:39.802Z"
-      },
-      {
-        "action": "Removed a todo",
-        "txt": "Master CSS1",
-        "at": "2024-07-05T15:23:43.290Z"
-      },
-      {
-        "action": "Added a todo",
-        "txt": "sss",
-        "at": "2024-07-05T15:23:49.246Z"
-      },
-      {
-        "action": "Updated a todo",
-        "txt": "Learn React6",
-        "at": "2024-07-05T15:23:56.209Z"
-      }
-    ],
-    "prefs": {
-      "color": "#e52424",
-      "bgColor": "#583c47"
-    }
-  },
-  {
-    "_id": "7AQEQr",
-    "fullname": "Eve",
-    "username": "Trent",
-    "password": "Tiger",
-    "createdAt": "2024-07-05T15:04:22.812Z",
-    "updatedAt": "2024-07-05T15:04:22.812Z",
-    "balance": 0,
-    "activities": [
-      {
-        "action": "Created by computer",
-        "txt": "",
-        "at": "2024-07-05T15:04:22.812Z"
-      }
-    ],
-    "prefs": {
-      "color": "black",
-      "bgColor": "white"
-    }
-  },
-  {
-    "_id": "nrxA8W",
-    "fullname": "Parrot",
-    "username": "Rabbit",
-    "password": "Giraffe",
-    "createdAt": "2024-07-05T15:04:22.812Z",
-    "updatedAt": "2024-07-05T15:04:22.812Z",
-    "balance": 0,
-    "activities": [
-      {
-        "action": "Created by computer",
-        "txt": "",
-        "at": "2024-07-05T15:04:22.812Z"
-      }
-    ],
-    "prefs": {
-      "color": "black",
-      "bgColor": "white"
-    }
-  },
-  {
-    "_id": "XgLfmK",
-    "fullname": "David",
-    "username": "Eagle",
-    "password": "Alice",
-    "createdAt": "2024-07-05T15:04:22.812Z",
-    "updatedAt": "2024-07-05T15:04:22.812Z",
-    "balance": 0,
-    "activities": [
-      {
-        "action": "Created by computer",
-        "txt": "",
-        "at": "2024-07-05T15:04:22.812Z"
-      }
-    ],
-    "prefs": {
-      "color": "black",
-      "bgColor": "white"
-    }
-  },
-  {
-    "_id": "pbsIy0",
-    "fullname": "Zebra",
-    "username": "Oscar",
-    "password": "Yvonne",
-    "createdAt": "2024-07-05T15:04:22.812Z",
-    "updatedAt": "2024-07-05T15:04:22.812Z",
-    "balance": 0,
-    "activities": [
-      {
-        "action": "Created by computer",
-        "txt": "",
-        "at": "2024-07-05T15:04:22.812Z"
-      }
-    ],
-    "prefs": {
-      "color": "black",
-      "bgColor": "white"
-    }
-  },
-  {
-    "_id": "vbrbLj",
-    "fullname": "Owl",
-    "username": "Charlie",
-    "password": "Faythe",
-    "createdAt": "2024-07-05T15:04:22.812Z",
-    "updatedAt": "2024-07-05T15:04:22.812Z",
-    "balance": 0,
-    "activities": [
-      {
-        "action": "Created by computer",
-        "txt": "",
-        "at": "2024-07-05T15:04:22.812Z"
-      }
-    ],
-    "prefs": {
-      "color": "black",
-      "bgColor": "white"
-    }
-  },
-  {
-    "fullname": "wolf",
-    "username": "wolf",
-    "password": "wolf",
-    "createdAt": 1720192230478,
-    "_id": "6Ssil4",
-    "balance": 20,
+    "fullname": "melrlrlrl",
+    "username": "mel",
+    "password": "mel",
+    "createdAt": 1720566316080,
+    "_id": "Rn3x8E",
+    "balance": 50,
     "activities": [
       {
         "action": "Signed up",
         "txt": "",
-        "at": "2024-07-05T15:10:30.478Z"
-      },
-      {
-        "action": "Removed a todo",
-        "txt": "fddd",
-        "at": "2024-07-05T15:11:05.675Z"
+        "at": "2024-07-09T23:05:16.080Z"
       },
       {
         "action": "Completed a todo",
-        "txt": "Learn React7",
-        "at": "2024-07-05T15:11:08.277Z"
+        "txt": "Learn React5",
+        "at": "2024-07-09T23:05:22.421Z"
       },
       {
-        "action": "Removed a todo",
-        "txt": "Learn React4",
-        "at": "2024-07-05T15:11:22.888Z"
+        "action": "Completed a todo",
+        "txt": "Learn React15",
+        "at": "2024-07-09T23:05:23.223Z"
+      },
+      {
+        "action": "Completed a todo",
+        "txt": "Learn React14",
+        "at": "2024-07-09T23:05:26.678Z"
       },
       {
         "action": "Completed a todo",
         "txt": "Master CSS1",
-        "at": "2024-07-05T15:11:26.043Z"
-      },
-      {
-        "action": "Unompleted a todo",
-        "txt": "Master CSS1",
-        "at": "2024-07-05T15:11:26.732Z"
-      },
-      {
-        "action": "Added a todo",
-        "txt": "sexxxx",
-        "at": "2024-07-05T15:11:47.694Z"
-      },
-      {
-        "action": "Updated a todo",
-        "txt": "aaaa",
-        "at": "2024-07-05T15:12:10.739Z"
-      },
-      {
-        "action": "Logged in",
-        "txt": "",
-        "at": "2024-07-05T15:14:03.793Z"
-      },
-      {
-        "action": "Logged in",
-        "txt": "",
-        "at": "2024-07-05T15:14:52.815Z"
-      }
-    ],
-    "prefs": {
-      "color": "#f26363",
-      "bgColor": "#8421fd"
-    }
-  },
-  {
-    "fullname": "skssksksk",
-    "username": "mi",
-    "password": "mi",
-    "createdAt": 1720193065035,
-    "_id": "7sVheb",
-    "balance": 0,
-    "activities": [
-      {
-        "action": "Signed up",
-        "txt": "",
-        "at": "2024-07-05T15:24:25.035Z"
-      }
-    ],
-    "prefs": {
-      "color": "#db1f1f",
-      "bgColor": "#1dbf1f"
-    }
-  },
-  {
-    "fullname": "mimi",
-    "username": "mimi",
-    "password": "mimi",
-    "createdAt": 1720560433652,
-    "_id": "dwDGKz",
-    "balance": 0,
-    "activities": [
-      {
-        "action": "Signed up",
-        "txt": "",
-        "at": "2024-07-09T21:27:13.652Z"
+        "at": "2024-07-09T23:05:29.366Z"
       },
       {
         "action": "Removed a todo",
-        "txt": "Learn React6",
-        "at": "2024-07-09T21:27:29.271Z"
+        "txt": "Learn React9",
+        "at": "2024-07-09T23:05:35.830Z"
       },
       {
-        "action": "Removed a todo",
-        "txt": "dgngf",
-        "at": "2024-07-09T21:27:31.380Z"
-      },
-      {
-        "action": "Removed a todo",
-        "txt": "Master CSS11",
-        "at": "2024-07-09T21:27:34.476Z"
+        "action": "Completed a todo",
+        "txt": "Practice Redux20",
+        "at": "2024-07-09T23:05:53.073Z"
       }
     ],
     "prefs": {
-      "color": "black",
-      "bgColor": "white"
+      "color": "#1ad562",
+      "bgColor": "#f5d6d6"
     }
   }
 ]
