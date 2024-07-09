@@ -231,5 +231,39 @@
       "color": "#db1f1f",
       "bgColor": "#1dbf1f"
     }
+  },
+  {
+    "fullname": "mimi",
+    "username": "mimi",
+    "password": "mimi",
+    "createdAt": 1720560433652,
+    "_id": "dwDGKz",
+    "balance": 0,
+    "activities": [
+      {
+        "action": "Signed up",
+        "txt": "",
+        "at": "2024-07-09T21:27:13.652Z"
+      },
+      {
+        "action": "Removed a todo",
+        "txt": "Learn React6",
+        "at": "2024-07-09T21:27:29.271Z"
+      },
+      {
+        "action": "Removed a todo",
+        "txt": "dgngf",
+        "at": "2024-07-09T21:27:31.380Z"
+      },
+      {
+        "action": "Removed a todo",
+        "txt": "Master CSS11",
+        "at": "2024-07-09T21:27:34.476Z"
+      }
+    ],
+    "prefs": {
+      "color": "black",
+      "bgColor": "white"
+    }
   }
 ]

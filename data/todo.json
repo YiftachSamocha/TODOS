@@ -27,15 +27,6 @@
     "color": "#c3e8a8"
   },
   {
-    "_id": "KqcN7b",
-    "txt": "Learn React6",
-    "importance": 10,
-    "isDone": false,
-    "createdAt": 1720026695919,
-    "updatedAt": 1720193036202,
-    "color": "#c3e8a8"
-  },
-  {
     "_id": "eysdtZ",
     "txt": "Learn React7",
     "importance": 9,
@@ -60,15 +51,6 @@
     "_id": "JzsEvr",
     "updatedAt": 1720050174071,
     "createdAt": 1720050174071,
-    "color": "#ffb347"
-  },
-  {
-    "_id": "xihCLC",
-    "txt": "Master CSS11",
-    "importance": 8,
-    "isDone": true,
-    "createdAt": 1720054309807,
-    "updatedAt": 1720193019797,
     "color": "#ffb347"
   },
   {
@@ -142,15 +124,6 @@
     "createdAt": 1720059585352,
     "color": "#ffb3ba",
     "_id": "R9aZxA"
-  },
-  {
-    "_id": "OZ8vm9",
-    "txt": "dgngf",
-    "importance": 5,
-    "isDone": true,
-    "createdAt": 1720143668590,
-    "updatedAt": 1720193482134,
-    "color": "#b8143a"
   },
   {
     "txt": "sexxxx",

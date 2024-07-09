@@ -1,6 +1,6 @@
 import { utilService } from "./util.service.js"
 
-export const userFrontService = { signup, login, logout, updateUser, getById, getEmptyUser, getEmptyCredentials }
+export const userFrontService = { signup, login, logout, updateUser, getLoggedinUser, getById, getEmptyUser, getEmptyCredentials }
 
 const BASE_URL = '/api/user'
 const STORAGE_KEY_LOGGEDIN = 'CURR USER:'
@@ -36,6 +36,10 @@ function logout() {
 function updateUser(userToUpdate) {
     return axios.put(BASE_URL + '/update', userToUpdate)
         .then(res => res.data)
+}
+
+function getLoggedinUser() {
+    return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN)) || {}
 }
 
 function getById(userId) {

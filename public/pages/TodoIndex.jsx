@@ -17,12 +17,8 @@ export function TodoIndex() {
 
     const dispatch = useDispatch()
 
-    const [searchParams, setSearchParams] = useSearchParams()
-
-
     useEffect(() => {
-        setSearchParams(filterBy)
-        loadTodos(filterBy)
+        loadTodos()
             .catch(() => {
                 showErrorMsg('Cannot load todos')
             })

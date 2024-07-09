@@ -1,4 +1,6 @@
-const { createStore } = Redux
+import { userFrontService } from "../services/user.front.service.js"
+
+const { createStore, compose } = Redux
 
 export const SET_TODOS = 'SET_TODOS'
 export const REMOVE_TODO = 'REMOVE_TODO'
@@ -16,7 +18,7 @@ const initalState = {
     todos: [-1],
     isLoading: false,
     filterBy: {},
-    user: {},
+    user: userFrontService.getLoggedinUser(),
 
 }
 
@@ -52,6 +54,6 @@ function appReducer(state = initalState, action = {}) {
     }
 
 }
-
-export const store = createStore(appReducer)
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+export const store = createStore(appReducer, composeEnhancers())
 window.gStore = store
